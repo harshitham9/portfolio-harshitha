@@ -80,6 +80,72 @@ function App() {
           </div>
         </section>
 
+        <section id="contact" className="py-10 border-t border-slate-800">
+  <h3 className="text-xl font-semibold mb-4">Contact</h3>
+  <p className="text-slate-300 mb-4">
+    Want to collaborate or have a role that fits my profile? Send me a message.
+  </p>
+
+  <form
+    className="grid gap-4 max-w-md"
+    onSubmit={async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value,
+      };
+
+      try {
+        const res = await fetch("https://portfolio-api-c68z.onrender.com/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+          alert("Message sent successfully!");
+          form.reset();
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Network error. Please try again.");
+      }
+    }}
+  >
+    <input
+      name="name"
+      type="text"
+      placeholder="Your name"
+      className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-sm"
+      required
+    />
+    <input
+      name="email"
+      type="email"
+      placeholder="Your email"
+      className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-sm"
+      required
+    />
+    <textarea
+      name="message"
+      placeholder="Your message"
+      rows="4"
+      className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-sm"
+      required
+    ></textarea>
+    <button
+      type="submit"
+      className="px-4 py-2 rounded-full bg-indigo-500 hover:bg-indigo-600 text-sm font-medium"
+    >
+      Send Message
+    </button>
+  </form>
+</section>
+
         {/* Experience, Projects, Contact... */}
         {/* We'll fill these later */}
 
