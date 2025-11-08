@@ -150,28 +150,34 @@ function App() {
         {/* We'll fill these later */}
 
         {/* Resume section */}
-        <section id="resume" className="py-10 border-t border-slate-800">
-          <h3 className="text-xl font-semibold mb-4">Resume</h3>
-          <p className="text-slate-300 mb-4">
-            Download my latest resume in PDF or Word format.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="/Harshitha_Mattaparthi_Resume.pdf"
-              download
-              className="px-4 py-2 rounded-full bg-indigo-500 hover:bg-indigo-600 text-sm font-medium"
-            >
-              Download PDF
-            </a>
-            <a
-              href="/Harshitha_Mattaparthi_Resume.docx"
-              download
-              className="px-4 py-2 rounded-full border border-slate-600 hover:border-indigo-400 text-sm"
-            >
-              Download Word
-            </a>
-          </div>
-        </section>
+<section id="resume" className="py-16 border-t border-slate-800 text-center">
+  <h3 className="text-2xl font-bold mb-4 text-indigo-400">Resume</h3>
+  <p className="text-slate-300 max-w-xl mx-auto mb-6">
+    Download my latest resume to explore my experience and projects as a
+    <span className="text-indigo-300 font-medium"> Full Stack Developer</span>.
+  </p>
+  
+  <div className="flex flex-wrap justify-center gap-4">
+    <a
+      href="/Harshitha_Mattaparthi_Resume.pdf"
+      download
+      className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded-full shadow transition-all duration-200 hover:scale-105"
+    >
+      📄 Download PDF
+    </a>
+    <a
+      href="/Harshitha_Mattaparthi_Resume.docx"
+      download
+      className="px-6 py-3 border border-indigo-400 text-indigo-300 hover:bg-indigo-600/20 rounded-full transition-all duration-200 hover:scale-105"
+    >
+      📝 Download Word
+    </a>
+  </div>
+
+  <p className="mt-8 text-xs text-slate-500">
+    Last updated: {new Date().getFullYear()}
+  </p>
+</section>
       </main>
 
       <footer className="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
