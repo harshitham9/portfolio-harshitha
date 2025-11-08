@@ -39,15 +39,16 @@ function App() {
         <div className="max-w-5xl mx-auto flex items-center justify-between px-4 py-3 gap-3">
           {/* Logo + name */}
           <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-full bg-indigo-500 text-white flex items-center justify-center text-xs font-bold shadow-md">
-              HM
+            {/* New logo icon */}
+            <div className="h-9 w-9 rounded-full bg-gradient-to-tr from-indigo-500 to-sky-500 text-white flex items-center justify-center text-xs font-bold shadow-md">
+              {"</>"}
             </div>
             <div className="leading-tight">
               <p className="text-sm font-semibold tracking-tight">
                 Harshitha <span className="text-indigo-500">Mattaparthi</span>
               </p>
               <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                Full Stack Developer · Irving, TX
+                Full Stack Developer · Irving, TX · Open to SDE / Java roles in US
               </p>
             </div>
           </div>
@@ -67,33 +68,41 @@ function App() {
               <a href="#projects" className="hover:text-indigo-500">
                 Projects
               </a>
+              <a href="#education" className="hover:text-indigo-500">
+                Education
+              </a>
               <a href="#contact" className="hover:text-indigo-500">
                 Contact
               </a>
-              <a
-                href="https://www.linkedin.com/in/harshithamattaparthi/"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-indigo-500"
-              >
-                LinkedIn
-              </a>
             </nav>
 
-            {/* Theme toggle */}
-            <button
-              type="button"
-              onClick={toggleTheme}
-              className="h-8 w-8 flex items-center justify-center rounded-full border border-slate-300 dark:border-slate-700 text-xs hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-              aria-label="Toggle dark mode"
-            >
-              {theme === "dark" ? "☀️" : "🌙"}
-            </button>
+            {/* Dark / Light switch */}
+            <div className="flex items-center gap-2 text-[11px]">
+              <span className="text-slate-500 dark:text-slate-400">Dark</span>
+              <button
+                type="button"
+                onClick={toggleTheme}
+                className="relative w-12 h-6 rounded-full bg-slate-300 dark:bg-slate-700 flex items-center transition-colors duration-200"
+                aria-label="Toggle dark / light mode"
+              >
+                <span
+                  className={
+                    "absolute top-[2px] h-5 w-5 rounded-full bg-white shadow-md flex items-center justify-center text-[10px] transition-transform duration-200 " +
+                    (theme === "dark" ? "translate-x-1" : "translate-x-6")
+                  }
+                >
+                  {theme === "dark" ? "🌙" : "☀️"}
+                </span>
+              </button>
+              <span className="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+                Light <span>☀️</span>
+              </span>
+            </div>
 
             {/* Resume button */}
             <a
               href="#resume"
-              className="text-xs px-3 py-1 rounded-full border border-indigo-400/60 bg-white/60 dark:bg-transparent hover:bg-indigo-500 hover:text-white transition"
+              className="hidden sm:inline text-xs px-3 py-1 rounded-full border border-indigo-400/60 bg-white/60 dark:bg-transparent hover:bg-indigo-500 hover:text-white transition"
             >
               Resume
             </a>
@@ -104,22 +113,27 @@ function App() {
       <main className="max-w-5xl mx-auto px-4 pb-16">
         {/* Hero */}
         <section className="py-16 flex flex-col gap-6" id="hero">
+          <p className="text-xs inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-400/60 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 w-max">
+            <span className="text-[10px]">🟢</span>
+            Actively looking for opportunities on C2C, W2, Full-Time in the US
+          </p>
+
           <p className="text-sm text-indigo-500 dark:text-indigo-300 font-medium">
-            Full Stack Developer · Java · Python · Cloud
+            Full Stack Developer · Java · Python · Cloud · React
           </p>
           <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-            Building scalable, cloud-ready applications with{" "}
+            Delivering reliable, cloud-ready applications using{" "}
             <span className="text-indigo-500 dark:text-indigo-400">
-              Java/Spring Boot, Python/FastAPI, and React
+              Java/Spring Boot, Python/FastAPI, and modern JavaScript frameworks
             </span>
             .
           </h2>
           <p className="text-slate-600 dark:text-slate-300 max-w-2xl">
-            I&apos;m a Full Stack Developer based in Irving, TX, experienced in
-            designing and maintaining web applications across fintech, retail,
-            and enterprise domains. I work with Java, Spring Boot, Python
-            (FastAPI), modern JavaScript frameworks like React and Angular,
-            and cloud-native tools such as Docker, Kubernetes, and AWS.
+            I&apos;m a Full Stack Developer based in Irving, TX, with experience
+            across fintech, retail, and enterprise platforms for companies like
+            Apple, Meijer, DXC Technology, and Paytm. I design and build
+            scalable microservices, RESTful APIs, and responsive UIs, and I&apos;m
+            open to Full-time SDE / Java roles across the US (C2C, W2, Full-Time).
           </p>
           <div className="flex flex-wrap gap-3">
             <a
@@ -138,85 +152,154 @@ function App() {
               href="https://www.linkedin.com/in/harshithamattaparthi/"
               target="_blank"
               rel="noreferrer"
-              className="px-5 py-2 rounded-full border border-sky-500/70 text-sm text-sky-600 dark:text-sky-300 hover:bg-sky-500/10"
+              className="px-5 py-2 rounded-full border border-sky-500/70 text-sm text-sky-700 dark:text-sky-300 hover:bg-sky-500/10 flex items-center gap-2"
             >
-              Connect on LinkedIn
+              <span>in</span>
+              <span>LinkedIn Profile</span>
             </a>
           </div>
         </section>
 
         {/* About */}
-        <section id="about" className="py-10 border-t border-slate-200 dark:border-slate-800">
+        <section
+          id="about"
+          className="py-10 border-t border-slate-200 dark:border-slate-800"
+        >
           <h3 className="text-xl font-semibold mb-4">About</h3>
           <p className="text-slate-600 dark:text-slate-300 mb-3">
-            I&apos;m a Full Stack Developer with end-to-end experience building
-            microservices, RESTful APIs, and responsive frontends. My work spans
-            high-traffic payment systems, retail platforms, and enterprise
-            applications for companies like Apple, Meijer, DXC Technology, and
-            Paytm.
+            I&apos;m a results-driven Full Stack Developer with solid experience
+            building microservices, RESTful APIs, and modern frontends. I&apos;ve
+            contributed to large-scale systems for{" "}
+            <span className="font-medium">
+              Apple, Meijer, DXC Technology, and Paytm
+            </span>
+            , working on high-traffic, business-critical applications.
           </p>
           <p className="text-slate-600 dark:text-slate-300 mb-3">
-            On the backend, I specialize in{" "}
+            My backend focus includes{" "}
             <span className="font-medium">
-              Java, Spring Boot, Spring MVC, Spring Security, Hibernate, and
-              FastAPI
-            </span>
-            , working with SQL and NoSQL databases such as PostgreSQL, Oracle,
-            MongoDB, and DynamoDB. On the frontend, I&apos;ve built interfaces
-            with React, Angular, and modern JavaScript, focusing on clean,
-            accessible, responsive UI.
+              Java, Spring Boot, Spring MVC, Spring Security, Hibernate, Struts,
+              Spring Cloud, and FastAPI
+            </span>{" "}
+            with experience across relational and NoSQL databases such as
+            Oracle, MySQL, PostgreSQL, MongoDB, Redis, and Cassandra.
           </p>
           <p className="text-slate-600 dark:text-slate-300">
-            I completed my{" "}
+            On the frontend, I&apos;ve built responsive UIs using{" "}
             <span className="font-medium">
-              M.S. in Information Studies at Trine University
-            </span>{" "}
-            and a{" "}
-            <span className="font-medium">
-              B.Tech in Computer Science Engineering
-            </span>{" "}
-            from GIET. I enjoy working in collaborative Agile teams and owning
-            features from design through deployment.
+              React, AngularJS/Angular, and Vue.js
+            </span>
+            , with strong foundations in JavaScript, HTML5, and CSS3. I enjoy
+            collaborating with cross-functional teams, working in Agile
+            environments, and taking features from concept through deployment.
           </p>
         </section>
 
         {/* Skills */}
-        <section id="skills" className="py-10 border-t border-slate-200 dark:border-slate-800">
-          <h3 className="text-xl font-semibold mb-4">Skills</h3>
+        <section
+          id="skills"
+          className="py-10 border-t border-slate-200 dark:border-slate-800"
+        >
+          <h3 className="text-xl font-semibold mb-4">Technical Skills</h3>
+          <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm">
+            Highlighting core skills from my resume, spanning backend, frontend,
+            cloud, and DevOps.
+          </p>
           <div className="grid md:grid-cols-3 gap-4 text-sm">
             <div className="bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800">
-              <h4 className="font-semibold mb-2 text-indigo-500 dark:text-indigo-300">
-                Languages
+              <h4 className="font-semibold mb-2 text-indigo-500 dark:text-indigo-300 flex items-center gap-2">
+                <span>💻</span> Languages
               </h4>
-              <p>Java, Python, JavaScript, SQL, C/C++, PHP</p>
-              <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-                Core Java (OOP, Collections, Streams, Concurrency)
-              </p>
+              <p>Java, Python, C/C++, PHP, SQL, JavaScript, HTML, CSS</p>
             </div>
+
             <div className="bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800">
-              <h4 className="font-semibold mb-2 text-indigo-500 dark:text-indigo-300">
-                Backend &amp; Cloud
+              <h4 className="font-semibold mb-2 text-indigo-500 dark:text-indigo-300 flex items-center gap-2">
+                <span>☕</span> Core Java
+              </h4>
+              <p>OOP, Collections, Lambda, Streams, Concurrency</p>
+            </div>
+
+            <div className="bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800">
+              <h4 className="font-semibold mb-2 text-indigo-500 dark:text-indigo-300 flex items-center gap-2">
+                <span>🧩</span> Frameworks
               </h4>
               <p>
-                Spring Boot, Spring MVC, Spring Security, FastAPI, Microservices
-              </p>
-              <p>AWS, Docker, Kubernetes, REST, WebSockets</p>
-              <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-                Oracle, PostgreSQL, MySQL, MongoDB, DynamoDB, Redis, Cassandra
+                Spring Boot, Spring MVC, Spring Security, Hibernate, Struts,
+                Spring Cloud, FastAPI
               </p>
             </div>
+
             <div className="bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800">
-              <h4 className="font-semibold mb-2 text-indigo-500 dark:text-indigo-300">
-                Frontend &amp; Web
+              <h4 className="font-semibold mb-2 text-indigo-500 dark:text-indigo-300 flex items-center gap-2">
+                <span>🎨</span> Frontend
               </h4>
-              <p>React, Angular, Vue.js, JavaScript, TypeScript (when needed)</p>
-              <p>HTML5, CSS3, Tailwind, Bootstrap, jQuery</p>
+              <p>AngularJS, Angular, React.js, Vue.js, JS Frameworks</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                HTML5, CSS3, Responsive UI
+              </p>
+            </div>
+
+            <div className="bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800">
+              <h4 className="font-semibold mb-2 text-indigo-500 dark:text-indigo-300 flex items-center gap-2">
+                <span>🌐</span> Web
+              </h4>
+              <p>JSP, Servlets, REST, WebSockets, HTML5, CSS3, jQuery</p>
+            </div>
+
+            <div className="bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800">
+              <h4 className="font-semibold mb-2 text-indigo-500 dark:text-indigo-300 flex items-center gap-2">
+                <span>🗄️</span> Databases
+              </h4>
+              <p>Oracle, MySQL, PostgreSQL, MongoDB, Redis, Cassandra</p>
+            </div>
+
+            <div className="bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800">
+              <h4 className="font-semibold mb-2 text-indigo-500 dark:text-indigo-300 flex items-center gap-2">
+                <span>🔗</span> ORM &amp; Tools
+              </h4>
+              <p>Hibernate, JPA</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                Version Control &amp; Build: Git, Bitbucket, Maven, Gradle, Ant
+              </p>
+            </div>
+
+            <div className="bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800">
+              <h4 className="font-semibold mb-2 text-indigo-500 dark:text-indigo-300 flex items-center gap-2">
+                <span>✅</span> Testing
+              </h4>
+              <p>JUnit, Mockito, TestNG, TDD</p>
+            </div>
+
+            <div className="bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800">
+              <h4 className="font-semibold mb-2 text-indigo-500 dark:text-indigo-300 flex items-center gap-2">
+                <span>☁️</span> Cloud &amp; DevOps
+              </h4>
+              <p className="mb-1">
+                AWS (EC2, S3, Lambda, RDS, DynamoDB), Azure, GCP
+              </p>
+              <p className="mb-1">
+                Jenkins, Docker, Kubernetes, Helm, Ansible, Terraform
+              </p>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Monitoring: Prometheus, Grafana, ELK Stack
+              </p>
+            </div>
+
+            <div className="bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800">
+              <h4 className="font-semibold mb-2 text-indigo-500 dark:text-indigo-300 flex items-center gap-2">
+                <span>🖥️</span> Operating Systems
+              </h4>
+              <p>Windows, Linux, macOS</p>
             </div>
           </div>
         </section>
 
         {/* Experience */}
-        <section id="experience" className="py-10 border-t border-slate-200 dark:border-slate-800">
+        <section
+          id="experience"
+          className="py-10 border-t border-slate-200 dark:border-slate-800"
+        >
           <h3 className="text-xl font-semibold mb-6">Experience</h3>
           <div className="space-y-6 text-sm">
             {/* Apple */}
@@ -227,8 +310,8 @@ function App() {
               className="block bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/60 cursor-pointer"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
-                <h4 className="font-semibold text-indigo-600 dark:text-indigo-300">
-                  Java Full Stack Developer · Apple
+                <h4 className="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center gap-2">
+                  <span>🍎</span> Java Full Stack Developer · Apple
                 </h4>
                 <p className="text-xs text-slate-500 dark:text-slate-400">
                   May 2024 – Present · Austin, TX
@@ -244,8 +327,8 @@ function App() {
                   Spring MVC.
                 </li>
                 <li>
-                  Deploy and monitor services in cloud environments using Docker
-                  and CI/CD pipelines.
+                  Deploy and monitor services with Docker and CI/CD pipelines
+                  in cloud environments.
                 </li>
               </ul>
             </a>
@@ -258,8 +341,8 @@ function App() {
               className="block bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/60 cursor-pointer"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
-                <h4 className="font-semibold text-indigo-600 dark:text-indigo-300">
-                  Java Developer · Meijer
+                <h4 className="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center gap-2">
+                  <span>🛒</span> Java Developer · Meijer
                 </h4>
                 <p className="text-xs text-slate-500 dark:text-slate-400">
                   Aug 2023 – Apr 2024 · Grand Rapids, MI
@@ -268,15 +351,15 @@ function App() {
               <ul className="mt-2 text-slate-700 dark:text-slate-300 list-disc list-inside space-y-1">
                 <li>
                   Developed Spring Boot microservices, containerized with Docker,
-                  and deployed to Kubernetes clusters.
+                  and deployed to Kubernetes.
                 </li>
                 <li>
-                  Integrated Kafka messaging and AWS services such as DynamoDB
+                  Integrated Kafka messaging and AWS services including DynamoDB
                   and Lambda.
                 </li>
                 <li>
-                  Applied TDD/BDD with JUnit, Mockito, and Cucumber to maintain
-                  high code quality.
+                  Applied TDD/BDD with JUnit, Mockito, and Cucumber to enhance
+                  code quality.
                 </li>
               </ul>
             </a>
@@ -289,8 +372,8 @@ function App() {
               className="block bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/60 cursor-pointer"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
-                <h4 className="font-semibold text-indigo-600 dark:text-indigo-300">
-                  Java Full Stack Developer · DXC Technology
+                <h4 className="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center gap-2">
+                  <span>🏢</span> Java Full Stack Developer · DXC Technology
                 </h4>
                 <p className="text-xs text-slate-500 dark:text-slate-400">
                   Jun 2021 – Jul 2022 · Hyderabad
@@ -302,12 +385,12 @@ function App() {
                   integrating SQL and MongoDB.
                 </li>
                 <li>
-                  Engineered responsive UIs using AngularJS, HTML5, CSS3,
+                  Engineered responsive UIs with AngularJS, HTML5, CSS3,
                   Bootstrap, and jQuery.
                 </li>
                 <li>
                   Collaborated in Agile teams to deliver scalable and maintainable
-                  solutions.
+                  features.
                 </li>
               </ul>
             </a>
@@ -320,8 +403,8 @@ function App() {
               className="block bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/60 cursor-pointer"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
-                <h4 className="font-semibold text-indigo-600 dark:text-indigo-300">
-                  Software Engineer · Paytm
+                <h4 className="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center gap-2">
+                  <span>💳</span> Software Engineer · Paytm
                 </h4>
                 <p className="text-xs text-slate-500 dark:text-slate-400">
                   Feb 2020 – May 2021 · India
@@ -337,8 +420,8 @@ function App() {
                   storage and databases.
                 </li>
                 <li>
-                  Worked closely with cross-functional teams to improve
-                  performance and reliability.
+                  Partnered with cross-functional teams to improve performance
+                  and reliability.
                 </li>
               </ul>
             </a>
@@ -346,9 +429,12 @@ function App() {
         </section>
 
         {/* Projects */}
-        <section id="projects" className="py-10 border-t border-slate-200 dark:border-slate-800">
+        <section
+          id="projects"
+          className="py-10 border-t border-slate-200 dark:border-slate-800"
+        >
           <h3 className="text-xl font-semibold mb-4">Projects</h3>
-          <p className="text-slate-600 dark:text-slate-300 mb-4">
+          <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm">
             A selection of work that highlights my experience with full stack
             development, APIs, and cloud-native architectures.
           </p>
@@ -360,13 +446,13 @@ function App() {
               rel="noreferrer"
               className="block bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/60 cursor-pointer"
             >
-              <h4 className="font-semibold text-indigo-600 dark:text-indigo-300 mb-1">
-                Portfolio Platform (This Site)
+              <h4 className="font-semibold text-indigo-600 dark:text-indigo-300 mb-1 flex items-center gap-2">
+                <span>🌐</span> Portfolio Platform (This Site)
               </h4>
               <p className="text-slate-700 dark:text-slate-300 mb-2">
                 Personal portfolio built with React, Vite, Tailwind CSS, GitHub
                 Pages, and a Spring Boot API hosted on Render for contact form
-                handling.
+                handling and demonstrating full stack integration.
               </p>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 Tech: React, Vite, Tailwind, Spring Boot, Render, GitHub Pages
@@ -380,12 +466,13 @@ function App() {
               rel="noreferrer"
               className="block bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/60 cursor-pointer"
             >
-              <h4 className="font-semibold text-indigo-600 dark:text-indigo-300 mb-1">
-                Portfolio Backend API
+              <h4 className="font-semibold text-indigo-600 dark:text-indigo-300 mb-1 flex items-center gap-2">
+                <span>🔗</span> Portfolio Backend API
               </h4>
               <p className="text-slate-700 dark:text-slate-300 mb-2">
                 Spring Boot REST API backing the portfolio contact form,
-                container-ready and deployable on cloud platforms like Render.
+                designed as a microservice and deployable on platforms like
+                Render, following best practices for configuration and logging.
               </p>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 Tech: Java, Spring Boot, Maven, REST, Render
@@ -407,12 +494,58 @@ function App() {
           </p>
         </section>
 
+        {/* Education */}
+        <section
+          id="education"
+          className="py-10 border-t border-slate-200 dark:border-slate-800"
+        >
+          <h3 className="text-xl font-semibold mb-4">Education</h3>
+          <div className="space-y-4 text-sm">
+            <div className="bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800 flex gap-3">
+              <div className="mt-1 text-2xl">🎓</div>
+              <div>
+                <h4 className="font-semibold text-indigo-600 dark:text-indigo-300">
+                  Master of Science (M.S), Information Studies
+                </h4>
+                <p className="text-slate-600 dark:text-slate-300">
+                  Trine University · Aug 2022 – Mar 2024 · Detroit
+                </p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">
+                  GPA: 3.8
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white/70 dark:bg-slate-900/60 rounded-xl p-4 border border-slate-200 dark:border-slate-800 flex gap-3">
+              <div className="mt-1 text-2xl">🎓</div>
+              <div>
+                <h4 className="font-semibold text-indigo-600 dark:text-indigo-300">
+                  Bachelor of Technology (B.Tech), Computer Science Engineering
+                </h4>
+                <p className="text-slate-600 dark:text-slate-300">
+                  GIET · Jun 2017 – Jul 2021 · India
+                </p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">
+                  GPA: 3.1
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Contact */}
-        <section id="contact" className="py-10 border-t border-slate-200 dark:border-slate-800">
+        <section
+          id="contact"
+          className="py-10 border-t border-slate-200 dark:border-slate-800"
+        >
           <h3 className="text-xl font-semibold mb-4">Contact</h3>
           <p className="text-slate-600 dark:text-slate-300 mb-4">
-            Open to full-time roles and collaboration opportunities. Share a bit
-            about what you&apos;re looking for, and I&apos;ll get back to you.
+            I&apos;m actively open to{" "}
+            <span className="font-medium">
+              Full-time SDE / Java roles (C2C, W2, Full-Time)
+            </span>{" "}
+            across the US. Share a bit about your role or project, and I&apos;ll
+            respond as soon as possible.
           </p>
 
           <form
@@ -478,14 +611,17 @@ function App() {
           </form>
         </section>
 
-        {/* Resume section */}
-        <section id="resume" className="py-16 border-t border-slate-200 dark:border-slate-800 text-center">
+        {/* Resume */}
+        <section
+          id="resume"
+          className="py-16 border-t border-slate-200 dark:border-slate-800 text-center"
+        >
           <h3 className="text-2xl font-bold mb-4 text-indigo-600 dark:text-indigo-400">
             Resume
           </h3>
           <p className="text-slate-600 dark:text-slate-300 max-w-xl mx-auto mb-6">
-            Download my latest resume to explore my experience, skills, and
-            academic background as a{" "}
+            Download my latest resume to review my experience, skills, and
+            education as a{" "}
             <span className="text-indigo-600 dark:text-indigo-300 font-medium">
               Full Stack Developer
             </span>
