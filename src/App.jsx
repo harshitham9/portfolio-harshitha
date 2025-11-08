@@ -156,17 +156,18 @@ function App() {
     Download my latest resume to explore my experience and projects as a
     <span className="text-indigo-300 font-medium"> Full Stack Developer</span>.
   </p>
-  
+
   <div className="flex flex-wrap justify-center gap-4">
+    {/* ✅ NOTE: no leading slash, just the filename */}
     <a
-      href="/Harshitha_Mattaparthi_Resume.pdf"
+      href="Harshitha_Mattaparthi_Resume.pdf"
       download
       className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded-full shadow transition-all duration-200 hover:scale-105"
     >
       📄 Download PDF
     </a>
     <a
-      href="/Harshitha_Mattaparthi_Resume.docx"
+      href="Harshitha_Mattaparthi_Resume.docx"
       download
       className="px-6 py-3 border border-indigo-400 text-indigo-300 hover:bg-indigo-600/20 rounded-full transition-all duration-200 hover:scale-105"
     >
