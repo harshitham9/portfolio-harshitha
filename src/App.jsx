@@ -93,152 +93,188 @@ function App() {
           </div>
         </section>
 
-        {/* Experience */}
-        <section id="experience" className="py-10 border-t border-slate-800">
-          <h3 className="text-xl font-semibold mb-6">Experience</h3>
-          <div className="space-y-6 text-sm">
-            {/* Apple */}
-            <article className="bg-slate-900/60 rounded-xl p-4 border border-slate-800">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
-                <h4 className="font-semibold text-indigo-300">
-                  Java Full Stack Developer · Apple
-                </h4>
-                <p className="text-xs text-slate-400">
-                  May 2024 – Present · Austin, TX
-                </p>
-              </div>
-              <ul className="mt-2 text-slate-300 list-disc list-inside space-y-1">
-                <li>
-                  Build responsive single-page applications using React, Redux,
-                  HTML5, CSS3, and JavaScript.
-                </li>
-                <li>
-                  Develop RESTful APIs and microservices with Spring Boot and Spring MVC.
-                </li>
-                <li>
-                  Deploy microservices on AWS using Docker and CI/CD pipelines.
-                </li>
-              </ul>
-            </article>
+{/* Experience */}
+<section id="experience" className="py-10 border-t border-slate-800">
+  <h3 className="text-xl font-semibold mb-6">Experience</h3>
+  <div className="space-y-6 text-sm">
+    {/* Apple */}
+    <a
+      href="https://www.apple.com"
+      target="_blank"
+      rel="noreferrer"
+      className="block bg-slate-900/60 rounded-xl p-4 border border-slate-800 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/60 cursor-pointer"
+    >
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+        <h4 className="font-semibold text-indigo-300">
+          Java Full Stack Developer · Apple
+        </h4>
+        <p className="text-xs text-slate-400">
+          May 2024 – Present · Austin, TX
+        </p>
+      </div>
+      <ul className="mt-2 text-slate-300 list-disc list-inside space-y-1">
+        <li>
+          Build responsive single-page applications using React, Redux,
+          HTML5, CSS3, and JavaScript.
+        </li>
+        <li>
+          Develop RESTful APIs and microservices with Spring Boot and Spring MVC.
+        </li>
+        <li>
+          Deploy microservices on AWS using Docker and CI/CD pipelines.
+        </li>
+      </ul>
+    </a>
 
-            {/* Meijer */}
-            <article className="bg-slate-900/60 rounded-xl p-4 border border-slate-800">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
-                <h4 className="font-semibold text-indigo-300">
-                  Java Developer · Meijer
-                </h4>
-                <p className="text-xs text-slate-400">
-                  Aug 2023 – Apr 2024 · Grand Rapids, MI
-                </p>
-              </div>
-              <ul className="mt-2 text-slate-300 list-disc list-inside space-y-1">
-                <li>
-                  Developed Spring Boot microservices, containerized with Docker, deployed
-                  to Kubernetes.
-                </li>
-                <li>
-                  Integrated Kafka messaging and AWS services such as DynamoDB and Lambda.
-                </li>
-                <li>
-                  Applied TDD/BDD with JUnit, Mockito, and Cucumber to improve code quality.
-                </li>
-              </ul>
-            </article>
+    {/* Meijer */}
+    <a
+      href="https://www.meijer.com"
+      target="_blank"
+      rel="noreferrer"
+      className="block bg-slate-900/60 rounded-xl p-4 border border-slate-800 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/60 cursor-pointer"
+    >
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+        <h4 className="font-semibold text-indigo-300">
+          Java Developer · Meijer
+        </h4>
+        <p className="text-xs text-slate-400">
+          Aug 2023 – Apr 2024 · Grand Rapids, MI
+        </p>
+      </div>
+      <ul className="mt-2 text-slate-300 list-disc list-inside space-y-1">
+        <li>
+          Developed Spring Boot microservices, containerized with Docker, deployed
+          to Kubernetes.
+        </li>
+        <li>
+          Integrated Kafka messaging and AWS services such as DynamoDB and Lambda.
+        </li>
+        <li>
+          Applied TDD/BDD with JUnit, Mockito, and Cucumber to improve code quality.
+        </li>
+      </ul>
+    </a>
 
-            {/* DXC Technology */}
-            <article className="bg-slate-900/60 rounded-xl p-4 border border-slate-800">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
-                <h4 className="font-semibold text-indigo-300">
-                  Java Full Stack Developer · DXC Technology
-                </h4>
-                <p className="text-xs text-slate-400">
-                  Jun 2021 – Jul 2022 · Hyderabad
-                </p>
-              </div>
-              <ul className="mt-2 text-slate-300 list-disc list-inside space-y-1">
-                <li>
-                  Built RESTful APIs and microservices with Spring Boot, integrating SQL and MongoDB.
-                </li>
-                <li>
-                  Implemented responsive UIs using Angular, HTML5, CSS3, and Bootstrap.
-                </li>
-                <li>
-                  Collaborated in Agile teams to deliver scalable and maintainable solutions.
-                </li>
-              </ul>
-            </article>
+    {/* DXC Technology */}
+    <a
+      href="https://dxc.com"
+      target="_blank"
+      rel="noreferrer"
+      className="block bg-slate-900/60 rounded-xl p-4 border border-slate-800 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/60 cursor-pointer"
+    >
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+        <h4 className="font-semibold text-indigo-300">
+          Java Full Stack Developer · DXC Technology
+        </h4>
+        <p className="text-xs text-slate-400">
+          Jun 2021 – Jul 2022 · Hyderabad
+        </p>
+      </div>
+      <ul className="mt-2 text-slate-300 list-disc list-inside space-y-1">
+        <li>
+          Built RESTful APIs and microservices with Spring Boot, integrating SQL and MongoDB.
+        </li>
+        <li>
+          Implemented responsive UIs using Angular, HTML5, CSS3, and Bootstrap.
+        </li>
+        <li>
+          Collaborated in Agile teams to deliver scalable and maintainable solutions.
+        </li>
+      </ul>
+    </a>
 
-            {/* Paytm */}
-            <article className="bg-slate-900/60 rounded-xl p-4 border border-slate-800">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
-                <h4 className="font-semibold text-indigo-300">
-                  Software Engineer · Paytm
-                </h4>
-                <p className="text-xs text-slate-400">Feb 2020 – May 2021 · India</p>
-              </div>
-              <ul className="mt-2 text-slate-300 list-disc list-inside space-y-1">
-                <li>
-                  Developed scalable backend services in Java for high-traffic payment workflows.
-                </li>
-                <li>
-                  Implemented secure RESTful APIs and integrated with cloud storage and databases.
-                </li>
-                <li>
-                  Worked closely with cross-functional teams to improve performance and reliability.
-                </li>
-              </ul>
-            </article>
-          </div>
-        </section>
+    {/* Paytm */}
+    <a
+      href="https://paytm.com"
+      target="_blank"
+      rel="noreferrer"
+      className="block bg-slate-900/60 rounded-xl p-4 border border-slate-800 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/60 cursor-pointer"
+    >
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+        <h4 className="font-semibold text-indigo-300">
+          Software Engineer · Paytm
+        </h4>
+        <p className="text-xs text-slate-400">
+          Feb 2020 – May 2021 · India
+        </p>
+      </div>
+      <ul className="mt-2 text-slate-300 list-disc list-inside space-y-1">
+        <li>
+          Developed scalable backend services in Java for high-traffic payment workflows.
+        </li>
+        <li>
+          Implemented secure RESTful APIs and integrated with cloud storage and databases.
+        </li>
+        <li>
+          Worked closely with cross-functional teams to improve performance and reliability.
+        </li>
+      </ul>
+    </a>
+  </div>
+</section>
 
-        {/* Projects */}
-        <section id="projects" className="py-10 border-t border-slate-800">
-          <h3 className="text-xl font-semibold mb-4">Projects</h3>
-          <p className="text-slate-300 mb-4">
-            A selection of projects that showcase my experience with full stack
-            development, cloud, and modern frontend frameworks.
-          </p>
-          <div className="grid md:grid-cols-2 gap-4 text-sm">
-            <article className="bg-slate-900/60 rounded-xl p-4 border border-slate-800">
-              <h4 className="font-semibold text-indigo-300 mb-1">
-                Portfolio Platform (This Site)
-              </h4>
-              <p className="text-slate-300 mb-2">
-                Personal portfolio built with React, Vite, Tailwind CSS, GitHub Pages,
-                and a Spring Boot API hosted on Render for contact form handling.
-              </p>
-              <p className="text-xs text-slate-400">
-                Tech: React, Tailwind, Vite, Spring Boot, Render, GitHub Pages
-              </p>
-            </article>
 
-            <article className="bg-slate-900/60 rounded-xl p-4 border border-slate-800">
-              <h4 className="font-semibold text-indigo-300 mb-1">
-                Microservices Backend
-              </h4>
-              <p className="text-slate-300 mb-2">
-                Designed and implemented RESTful microservices with Spring Boot and
-                Docker, integrating AWS services and messaging for scalable enterprise workloads.
-              </p>
-              <p className="text-xs text-slate-400">
-                Tech: Java, Spring Boot, Docker, AWS, Kafka
-              </p>
-            </article>
-          </div>
+{/* Projects */}
+<section id="projects" className="py-10 border-t border-slate-800">
+  <h3 className="text-xl font-semibold mb-4">Projects</h3>
+  <p className="text-slate-300 mb-4">
+    A selection of projects that showcase my experience with full stack
+    development, cloud, and modern frontend frameworks.
+  </p>
+  <div className="grid md:grid-cols-2 gap-4 text-sm">
+    {/* Portfolio project */}
+    <a
+      href="https://github.com/harshitham9/portfolio-harshitha"
+      target="_blank"
+      rel="noreferrer"
+      className="block bg-slate-900/60 rounded-xl p-4 border border-slate-800 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/60 cursor-pointer"
+    >
+      <h4 className="font-semibold text-indigo-300 mb-1">
+        Portfolio Platform (This Site)
+      </h4>
+      <p className="text-slate-300 mb-2">
+        Personal portfolio built with React, Vite, Tailwind CSS, GitHub Pages,
+        and a Spring Boot API hosted on Render for contact form handling.
+      </p>
+      <p className="text-xs text-slate-400">
+        Tech: React, Tailwind, Vite, Spring Boot, Render, GitHub Pages
+      </p>
+    </a>
 
-          <p className="mt-4 text-xs text-slate-500">
-            More projects on{" "}
-            <a
-              href="https://github.com/harshitham9"
-              target="_blank"
-              rel="noreferrer"
-              className="text-indigo-400 hover:underline"
-            >
-              GitHub
-            </a>
-            .
-          </p>
-        </section>
+    {/* Backend / microservices project */}
+    <a
+      href="https://github.com/harshitham9/portfolio-api"
+      target="_blank"
+      rel="noreferrer"
+      className="block bg-slate-900/60 rounded-xl p-4 border border-slate-800 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/60 cursor-pointer"
+    >
+      <h4 className="font-semibold text-indigo-300 mb-1">
+        Portfolio Backend API
+      </h4>
+      <p className="text-slate-300 mb-2">
+        Spring Boot REST API powering the portfolio contact form, deployed to
+        Render using containerized microservice patterns.
+      </p>
+      <p className="text-xs text-slate-400">
+        Tech: Java, Spring Boot, Maven, Render, REST
+      </p>
+    </a>
+  </div>
+
+  <p className="mt-4 text-xs text-slate-500">
+    More projects on{" "}
+    <a
+      href="https://github.com/harshitham9"
+      target="_blank"
+      rel="noreferrer"
+      className="text-indigo-400 hover:underline"
+    >
+      GitHub
+    </a>
+    .
+  </p>
+</section>
+
 
         {/* Contact */}
         <section id="contact" className="py-10 border-t border-slate-800">
