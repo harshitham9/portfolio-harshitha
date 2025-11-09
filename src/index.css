@@ -2,8 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global fonts & theme */
 body {
   @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
+}
+
+/* Smooth scrolling for in-page links (#about, #skills, etc.) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Subtle default transitions everywhere */
+* {
+  transition: all 0.15s ease-out;
+}
+
+/* Floating animation for the snapshot card */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
 }
