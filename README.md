@@ -1,16 +1,65 @@
-# React + Vite
+# 🌐 Harshitha Mattaparthi — Full Stack Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the source code for my personal developer portfolio.  
+This portfolio showcases my experience, technical skills, and end-to-end project development using **Java, Spring Boot, React, TailwindCSS, Cloud, and DevOps frameworks**.
 
-Currently, two official plugins are available:
+🔗 **Live Portfolio:**  
+👉 https://harshitham9.github.io/portfolio-harshitha/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📄 **Resume (PDF & DOCX):**  
+Available directly on the site under the **Resume** section.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 👩‍💻 About Me
 
-## Expanding the ESLint configuration
+I’m **Harshitha Mattaparthi**, a **Full Stack Developer** based in Irving, TX.  
+I have experience working across large-scale enterprise systems in **fintech, retail, and technology**, collaborating with teams at:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🍎 **Apple** — Java Full Stack Development  
+- 🛒 **Meijer** — Java + Spring Boot Microservices  
+- 🏢 **DXC Technology** — Full Stack Development  
+- 💳 **Paytm** — Backend API Engineering  
+
+I specialize in:
+
+- **Backend:** Java, Spring Boot, Microservices, APIs  
+- **Frontend:** React, Angular, TailwindCSS  
+- **Cloud & DevOps:** AWS, Docker, Kubernetes, Jenkins  
+- **Databases:** PostgreSQL, MySQL, MongoDB, Redis  
+
+Actively looking for **Full-Time, C2C, W2 SDE / Java Developer roles** across the US.
+
+---
+
+## 🛠️ Tech Stack Used in This Portfolio
+
+### **Frontend**
+- React (Vite)
+- Tailwind CSS
+- Custom Dark/Light theme switch  
+- IntersectionObserver animations  
+- Responsive UI layout
+
+### **Backend (Contact API)**
+- Java 17
+- Spring Boot REST API
+- CORS enabled
+- Hosted on **Render**
+
+### **Deployment**
+- Frontend deployed using **GitHub Pages**
+- Backend deployed using **Render Web Service**
+- CI/CD enabled via GitHub Actions (optional)
+
+---
+
+## 🚀 Features
+
+- ⚡ Modern, animated UI  
+- 🌗 Dark / Light mode toggle  
+- 🧩 Fully responsive design  
+- ✉️ Integrated contact form with backend email support  
+- 📄 Downloadable **PDF** and **Word** resumes  
+- 🎨 Custom hover animations, scroll transitions, and interactive components  
+- 🔎 Designed to be recruiter-friendly
